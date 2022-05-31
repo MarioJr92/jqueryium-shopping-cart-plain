@@ -23,3 +23,7 @@ const updateTotalCost = (el) => {
   return prices;
 };
 
+const sum = (x, y) => {
+  return x + y;
+};
+
