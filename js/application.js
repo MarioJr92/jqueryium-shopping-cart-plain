@@ -9,3 +9,17 @@ const calculateTotalCost = (el) => {
   let totalCost = jerseyPrice * jerseyQuantity;
   return totalCost;
 };
+
+const updateTotalCost = (el) => {
+  let prices = [];
+
+  $('tbody tr').each((i, el) => {
+    let totalCost = parseFloat(calculateTotalCost(el));
+    prices.push(totalCost);
+    $(el).children('.cost').html(`$${totalCost.toFixed(2)}`);
+  });
+
+  console.log(prices);
+  return prices;
+};
+
