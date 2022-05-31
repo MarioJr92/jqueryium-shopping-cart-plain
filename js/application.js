@@ -27,3 +27,7 @@ const sum = (x, y) => {
   return x + y;
 };
 
+const updateTotal = () => {
+  let totalCost = updateTotalCost().reduce(sum).toFixed(2);
+  $('#totalCost').html(totalCost);
+};
